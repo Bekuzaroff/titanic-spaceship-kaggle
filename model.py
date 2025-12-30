@@ -4,7 +4,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.discriminant_analysis import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.impute import SimpleImputer
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error, precision_score
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
@@ -114,6 +114,8 @@ rmse = np.sqrt(mae)
 
 print("mae: ", mae)
 print("rmse: ", rmse)
+
+print("precision: ", precision_score(full_labels, full_predictions))
 
 
 
